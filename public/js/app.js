@@ -13,7 +13,7 @@ timeForm.addEventListener('submit', (e) => {
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
 
-    fetch('http://localhost:3000/time?address='+locate).then((response) => {
+    fetch('/time?address='+locate).then((response) => {
         response.json().then((data) => {
             if(data.error){
                 messageOne.textContent = data.error
